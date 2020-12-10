@@ -1,3 +1,9 @@
+/*
+Title: OOP3200Java-ASasi-JYuan-Lab4
+Name:Ashok Sasitharan 100745484, Jacky Yuan 100520106
+Date: December 09 2020
+Changed: N/A
+ */
 package ca.durhamcollege;
 
 import java.time.LocalDate;
@@ -6,9 +12,14 @@ import java.util.regex.Pattern;
 public abstract class Employee extends Person
 {
     //PRIVATE INSTANCE VARIABLES
-    private String empID;
+    private  String empID;
 
     //ACCESSOR
+
+    /**
+     * Gets an employees EmployeeID
+     * @return
+     */
     public String getEmpID()
     {
         return empID;
@@ -16,6 +27,14 @@ public abstract class Employee extends Person
 
 
     //PARAMTERIZED CONSTRUCTOR
+
+    /**
+     * Initializes a person object
+     * @param fullName
+     * @param birthDate
+     * @param empID
+     * @throws IllegalArgumentException when employeeID is not numeric and is not equal to 8 digits
+     */
     Employee (String fullName, LocalDate birthDate,final String empID)
     {
         super(fullName,birthDate);
@@ -30,6 +49,11 @@ public abstract class Employee extends Person
 
     }
     //PUBLIC METHODS
+
+    /**
+     * Calculates an employee's weekly pay
+     * @return double
+     */
     public double calculatePayDay()
     {
         double pay=0.0;
