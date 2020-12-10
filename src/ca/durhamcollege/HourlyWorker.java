@@ -49,7 +49,7 @@ public class HourlyWorker extends Employee
         }
         else
         {
-            throw new IllegalArgumentException( hoursPerWeek+" is an invalid amount of hours. The maximum hours you can work in a week is 48.0 hours");
+            throw new IllegalArgumentException( hoursPerWeek+" is an invalid amount of hours. You can only work between 0.0-48.0 hours per week");
         }
     }
 

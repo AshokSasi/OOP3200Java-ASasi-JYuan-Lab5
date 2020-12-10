@@ -16,10 +16,12 @@ public class Main {
     {
         final int numObject = 5;
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        double totalPay=0.0;
 
         //SALARIED EMPLOYEE
         //Create a SalariedEmployee object
-        SalariedEmployee salEmp = new SalariedEmployee("Ashok Sasitharan",   LocalDate.parse("07/08/2000", dateFormat),"18325648",55002.22);
+        SalariedEmployee salEmp = new SalariedEmployee("Ashok Sasitharan",   LocalDate.parse("07/08/2000", dateFormat),"18325648",500000);
+
         //Print out the yearly salary
         System.out.println("Yearly Salary: $"+ salEmp.getYearlySalary());
         //change the YearlySalary
@@ -58,10 +60,12 @@ public class Main {
             System.out.println("\n---------------------------------------------------");
             for (int i=0;i < numObject; i++)
             {
-                System.out.printf("%10s %21s %7s% 10.2f", empObj[i].getEmpID(),empObj[i].getName(), "$", empObj[i].calculatePayDay());
+                System.out.printf("%10s %21s %8s %5.2f", empObj[i].getEmpID(),empObj[i].getName(), "$", empObj[i].calculatePayDay());
                 System.out.println("");
+                //Increment totalPay
+                totalPay+=empObj[i].calculatePayDay();
             }
-
+            System.out.printf("\nTotal Amount Paid: $ %1.2f" , totalPay);
         }
         //catch block
         catch (Exception ex)
