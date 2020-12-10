@@ -30,8 +30,9 @@ public abstract class Employee extends Person
 
     }
     //public methods
-    public double calculatePayDay(double pay)
+    public double calculatePayDay()
     {
+        double pay=0.0;
 
         return pay;
     }

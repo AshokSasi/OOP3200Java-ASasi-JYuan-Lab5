@@ -36,9 +36,9 @@ public class HourlyWorker extends Employee
     }
 
     @Override
-    public double calculatePayDay(double pay)
+    public double calculatePayDay()
     {
-        pay = (getHoursPerWeek()*getHourlyRate());
-        return super.calculatePayDay(pay);
+      double  pay = (getHoursPerWeek()*getHourlyRate());
+        return super.calculatePayDay()+pay;
     }
 }

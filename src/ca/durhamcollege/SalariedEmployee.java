@@ -38,10 +38,10 @@ public class SalariedEmployee extends Employee
     }
 
     @Override
-    public double calculatePayDay(double pay)
+    public double calculatePayDay()
     {
-        pay =(getYearlySalary()/52);
-        return super.calculatePayDay(pay);
+        double pay =(getYearlySalary()/52);
+        return super.calculatePayDay() + pay;
     }
 
 
