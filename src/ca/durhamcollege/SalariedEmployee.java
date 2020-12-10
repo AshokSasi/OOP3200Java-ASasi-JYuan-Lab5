@@ -4,14 +4,17 @@ import java.time.LocalDate;
 
 public class SalariedEmployee extends Employee
 {
+    //PRIVATE INSTANCE VARIABLES
     private double yearlySalary;
+    private final int weeksInYear=52;
 
-    //GETTERS AND SETTERS
+    // ACCESSORS
     public double getYearlySalary()
     {
         return yearlySalary;
     }
 
+    // MUTATORS
     public void setYearlySalary(double yearlySalary)
     {
         if (yearlySalary >= 0.0)
@@ -22,14 +25,9 @@ public class SalariedEmployee extends Employee
         {
             throw new IllegalArgumentException( yearlySalary+" is an invalid yearly salary. The yearly salary must be a positive number");
         }
-
-
-
-
-
     }
 
-    //CONSTRUCTORS
+    // PARAMETERIZED CONSTRUCTOR
     SalariedEmployee(String fullName, LocalDate birthDate, final String empID,double yearlySalary)
     {
         super( fullName,  birthDate,  empID);
@@ -37,10 +35,11 @@ public class SalariedEmployee extends Employee
 
     }
 
+    // PUBLIC METHODS
     @Override
     public double calculatePayDay()
     {
-        double pay =(getYearlySalary()/52);
+        double pay = (double)Math.round ((getYearlySalary()/weeksInYear) * 100.0)/100.0;
         return super.calculatePayDay() + pay;
     }
 

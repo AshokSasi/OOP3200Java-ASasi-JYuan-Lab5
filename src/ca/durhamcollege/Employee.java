@@ -5,17 +5,17 @@ import java.util.regex.Pattern;
 
 public abstract class Employee extends Person
 {
+    //PRIVATE INSTANCE VARIABLES
     private String empID;
 
-    //Getters and Setters
-
+    //ACCESSOR
     public String getEmpID()
     {
         return empID;
     }
 
 
-    //Constructor
+    //PARAMTERIZED CONSTRUCTOR
     Employee (String fullName, LocalDate birthDate,final String empID)
     {
         super(fullName,birthDate);
@@ -29,7 +29,7 @@ public abstract class Employee extends Person
         }
 
     }
-    //public methods
+    //PUBLIC METHODS
     public double calculatePayDay()
     {
         double pay=0.0;
