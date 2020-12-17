@@ -29,7 +29,7 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        primaryStage.setTitle("Java Lab 5");
+        primaryStage.setTitle("BMI Calculator");
 
         // CONTROLS
         Label MyHeight = new Label ("My Height(Inches):");
